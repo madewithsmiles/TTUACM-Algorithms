@@ -1,20 +1,16 @@
-Problems for the week of 09-07 all come from Project Euler and increase in difficulty as you complete them.
+## Problems for the week of 09-07 all come from Project Euler and increase in difficulty as you complete them.
 ___
-
-Project Euler Problem 4 - https://projecteuler.net/problem=4
-___
+### Project Euler Problem 4 - https://projecteuler.net/problem=4
 
 A palindromic number reads the same both ways. The largest palindrome made from the product of two 2-digit numbers is 9009 = 91 × 99.
 Find the largest palindrome made from the product of two 3-digit numbers.
-
-Project Euler Problem 7 - https://projecteuler.net/problem=7
 ___
+### Project Euler Problem 7 - https://projecteuler.net/problem=7
 
 By listing the first six prime numbers: 2, 3, 5, 7, 11, and 13, we can see that the 6th prime is 13.
 What is the 10 001st prime number?
-
-Project Euler Problem 8 - https://projecteuler.net/problem=8
 ___
+### Project Euler Problem 8 - https://projecteuler.net/problem=8
 
 The four adjacent digits in the 1000-digit number that have the greatest product are 9 × 9 × 8 × 9 = 5832.
 
