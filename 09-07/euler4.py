@@ -1,5 +1,5 @@
 def Euler4():
-	def IsPalindrome(s):
+    def IsPalindrome(s):
 		return s[::-1] == s 			# Check if s stepped through backwards is the same as s
 	largest = 0
 	for i in range(100, 1000):			# Loop through all 3 digit numbers
