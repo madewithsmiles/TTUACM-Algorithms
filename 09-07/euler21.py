@@ -13,7 +13,7 @@ def euler21():
 	seen = []
 	total = 0
 
-	# Loop through all numbers under 10,000
+	# Loop through all numbers in the range [0, 10000)
 	for i in range(10000):
 		x,y = amicable(i)
 		# Problem specifies that x cannot equal y, also if x is None, then the number is not amicable
