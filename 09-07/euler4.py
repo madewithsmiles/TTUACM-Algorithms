@@ -5,7 +5,7 @@ def Euler4():
 	for i in range(100, 1000):			# Loop through all 3 digit numbers
 		for j in range(100, 1000):		# Loop through all 3 digit numbers
 			prod = i * j
-			if IsPalindrome(str(prod)): # If the product is a palindrome
-				if prod > largest: 		# And prod is bigger than our current largest product
+			if IsPalindrome(str(prod)): 	# If the product is a palindrome
+				if prod > largest: 	# And prod is bigger than our current largest product
 					largest = prod 
 	return largest
