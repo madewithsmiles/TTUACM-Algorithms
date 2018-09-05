@@ -18,7 +18,7 @@ def euler21():
 		x = amicable(i)
 		# Problem specifies that x cannot equal y, also if x is None, then the number is not amicable
 		if x != None and x != i:
-		# Do not add repeats to the total
+			# Do not add repeats to the total
 			if x not in seen:
 				# Add numbers to total and to list of seen numbers
 				total += x + i
