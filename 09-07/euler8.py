@@ -33,6 +33,7 @@ def euler8():
 			# Loop through the next 12 digits and multiply
 			for j in range(1,13):
 				prod *= int(num[i+j])
+				if prod == 0:	break
 
 			if prod > largestProd: 
 				largestProd = prod
