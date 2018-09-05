@@ -7,7 +7,7 @@ def euler21():
 	# Returns a tuple containing the sumDivs(n) and n if sumDivs(sumDivs(n)) is equal to n, otherwise (None, None)
 	def amicable(n):
 		total = sumDivs(n)
-		return (total, n) if sumDivs(total) == n else (None, None)
+		return total if sumDivs(total) == n else None
 
 	# Initialize seen list, keeps track of all amicable numbers we have seen in the past
 	seen = []
@@ -15,12 +15,12 @@ def euler21():
 
 	# Loop through all numbers in the range [0, 10000)
 	for i in range(10000):
-		x,y = amicable(i)
+		x = amicable(i)
 		# Problem specifies that x cannot equal y, also if x is None, then the number is not amicable
-		if x == y or x == None: continue
+		if x != None and x != i:
 		# Do not add repeats to the total
-		if x not in seen:
-			# Add numbers to total and to list of seen numbers
-			total += x + y
-			seen.extend([x,y])
+			if x not in seen:
+				# Add numbers to total and to list of seen numbers
+				total += x + i
+				seen.extend([x, i])
 	return total
