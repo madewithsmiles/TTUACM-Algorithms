@@ -22,8 +22,8 @@ def euler8():
 
 	largestProd = 0
 	
-	# Loop from index 0 to len(num) - 12 (prevent index out-of-bounds errors)
-	for i in range(len(num) - 11):
+	# Loop from index 0 to len(num) - 11 (prevent index out-of-bounds errors)
+	for i in range(len(num) - 12):
 		# If the product begins with a 0, the end product will be 0
 		if num[i] == "0": continue
 
