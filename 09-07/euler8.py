@@ -21,21 +21,21 @@ def euler8():
 	71636269561882670428252483600823257530420752963450"
 
 	largestProd = 0
-	for i in range(len(num)):
+	
+	# Loop from index 0 to len(num) - 12 (prevent index out-of-bounds errors)
+	for i in range(len(num) - 11):
 		# If the product begins with a 0, the end product will be 0
 		if num[i] == "0": continue
 
 		# Start off our product
 		prod = int(num[i])
 
-		# If we can extend out 12 digits from where we are without indexing out of bounds
-		if i + 12 < len(num):
-			# Loop through the next 12 digits and multiply
-			for j in range(1,13):
-				prod *= int(num[i+j])
-				if prod == 0:	break
+		# Loop through the next 12 digits and multiply
+		for j in range(1,13):
+			prod *= int(num[i+j])
+			if prod == 0:	break
 
-			if prod > largestProd: 
-				largestProd = prod
+		if prod > largestProd: 
+			largestProd = prod
 				
 	return largestProd
