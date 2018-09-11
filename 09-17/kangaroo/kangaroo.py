@@ -21,11 +21,11 @@ x1 - x2 = j(v2 - v1)
 '''
 def kangaroo(x1, v1, x2, v2):
     velDiff = v2 - v1
+    posDiff = x1 - x2
     # If you divide by 0 then j is undefined
     if velDiff != 0:
-        z = (x1 - x2) / velDiff
         # If z is a positive integer (no negative or partial jumps)
-        if z.is_integer() and z > 0:
+        if posDiff % velDiff == 0 and posDiff / velDiff > 0:
             return 'YES'
     # Otherwise there is no j that satisfies our conditions
     return 'NO'
