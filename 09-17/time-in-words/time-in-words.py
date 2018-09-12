@@ -12,27 +12,41 @@ def minute_to_string(minute):
 
     minute = str(minute)
 
-    if minute == '0':
-        return ''
-
-    ones = dict(zip('123456789', ['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine']))
+    num_as_string = {
+        '0' : '',
+        '1' : 'one', 
+        '2' : 'two', 
+        '3' : 'three', 
+        '4' : 'four',
+        '5' : 'five',
+        '6' : 'six',
+        '7' : 'seven',
+        '8' : 'eight',
+        '9' : 'nine',
+        '10' : 'ten', 
+        '11' : 'eleven',
+        '12' : 'twelve',
+        '13' : 'thirteen',
+        '15' : 'fifteen',
+        '18' : 'eighteen'
+    }
 
     if len(minute) == 1:
-        return '{} minute'.format(ones[minute])
+        return '{} minute'.format(num_as_string[minute])
 
-    teens = dict(zip(['10', '11', '12', '13', '15', '18'], ['ten', 'eleven', 'twelve', 'thirteen', 'fifteen', 'eighteen']))
-    tens = dict(zip('2345', ['twenty', 'thirty', 'forty', 'fifty']))
+    tens = {
+        '2' : 'twenty',
+        '3' : 'thirty',
+        '4' : 'forty',
+        '5' : 'fifty'
+    }
 
     tens_place = minute[0]
     ones_place = minute[1]
-    if minute in teens:
-        return '{} minutes'.format(teens[minute])
     if tens_place == '1':
-        return '{}teen minutes'.format(ones[ones_place])
-    if ones_place == '0':
-        return '{} minutes'.format(tens[tens_place])
+        return '{} minutes'.format(num_as_string[minute])
     else:
-        return '{} {} minutes'.format(tens[tens_place], ones[ones_place])
+        return '{} {} minutes'.format(tens[tens_place], num_as_string[ones_place])
 
 def hour_to_string(hour):
     return ['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'eleven', 'twelve'][hour - 1]
