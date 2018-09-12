@@ -35,7 +35,7 @@ def minute_to_string(minute):
         return '{} {} minutes'.format(tens[tens_place], ones[ones_place])
 
 def hour_to_string(hour):
-    return dict(zip(range(1, 13), ['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'eleven', 'twelve']))[hour]
+    return ['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'eleven', 'twelve'][hour - 1]
 
 def time_to_string(hour, minute):
     if minute == 0:
