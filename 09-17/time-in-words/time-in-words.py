@@ -29,7 +29,7 @@ def minute_to_string(minute):
         return '{} minutes'.format(teens[minute])
     if tens_place == '1':
         return '{}teen minutes'.format(ones[ones_place])
-    elif ones_place == '0':
+    if ones_place == '0':
         return '{} minutes'.format(tens[tens_place])
     else:
         return '{} {} minutes'.format(tens[tens_place], ones[ones_place])
