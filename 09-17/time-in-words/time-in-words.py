@@ -54,7 +54,7 @@ def hour_to_string(hour):
 def time_to_string(hour, minute):
     if minute == 0:
         return '{} o\' clock'.format(hour_to_string(hour))
-    if minute in range(1, 15) or minute in range(16, 30):
+    if 1 <= minute < 15 or 16 <= minute < 30:
         return '{} past {}'.format(minute_to_string(minute), hour_to_string(hour))
     if minute == 15:
         return 'quarter past {}'.format(hour_to_string(hour))
@@ -62,7 +62,7 @@ def time_to_string(hour, minute):
         return 'half past {}'.format(hour_to_string(hour))
     if minute == 45:
         return 'quarter to {}'.format(hour_to_string(hour + 1))
-    if minute in range(31, 45) or minute in range(46, 60):
+    if 31 <= minute < 45 or 46 <= minute < 60:
         return '{}{} to {}'.format(minute_to_string(60 - minute),'s' if 60 - minute < 10 else '' , hour_to_string(hour + 1))
 
 if __name__ == '__main__':
