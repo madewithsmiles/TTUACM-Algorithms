@@ -1,6 +1,6 @@
 **Write the knightDistance function for the below problem.**
 
-If i and j are integers in {1..8}, let (i,j) represent the square on the chess board i squares from the left and j from the top (e.g., (1,1) is the upper left corner and (8,8) is the lower right). Now if i1,j1,i2, and j2 are integers in {1..8},  knightDistance(i1,j1,i2,j2) is the smallest number of moves a knight can take to get from (i1,j1) to (i2,j2).
+If i and j are integers in {1..8}, let (i,j) represent the square on the chess board i squares from the left and j from the top (e.g., (1,1) is the upper left corner and (8,8) is the lower right). Now if s and e are valid squares on the board,  knightDistance(s, e) is the smallest number of moves a knight can take to get from (i1,j1) to (i2,j2).
 
 **Write a function called isRotation(s1, s2) that returns true if s2 is a rotation of s1, and false otherwise.**
 
