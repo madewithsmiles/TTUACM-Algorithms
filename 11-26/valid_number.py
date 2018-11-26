@@ -34,7 +34,7 @@ class Solution:
             return False
         elif p == 0: 
             return self.integer(s[1:])
-        if p == 1:
+        elif p == 1:
             if s[0] in '+-':
                 return self.integer(s[2:])
         
