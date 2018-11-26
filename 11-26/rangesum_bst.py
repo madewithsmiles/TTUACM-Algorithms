@@ -23,7 +23,7 @@ class Solution:
             return
       
         # Create a deque with the root in it 
-        queue = deque(root)
+        queue = deque([root])
         
         # Level order traversal
         while queue: 
