@@ -12,6 +12,6 @@ This problem is about finding the sum of nodes in a binary search tree given som
 
 **Solve the LeetCode problem Valid Number**
 
-https://leetcode.com/problems/range-sum-of-bst/
+https://leetcode.com/problems/valid-number/
 
 This problem is about determing whether a given input string is a valid number or not. Valid numbers are things like -2.3, +5, 7, 5e70, etc. More details given in the problem description.
