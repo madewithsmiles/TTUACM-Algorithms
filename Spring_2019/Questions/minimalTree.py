@@ -6,22 +6,23 @@ class Node():
         self.right = None
         self.val = val
 
-def minimalBST(arr, left, right):
-    if right < left:
-        return None
-
-    mid = (left + right) // 2
-
-    head = Node(arr[mid])
-    head.left = minimalBST(arr, left, mid - 1)
-    head.right = minimalBST(arr, mid + 1, right)
-
-    return head
 
 class Test(unittest.TestCase):
+    def minimalBST(self, arr, left, right):
+        if right < left:
+            return None
+
+        mid = (left + right) // 2
+
+        head = Node(arr[mid])
+        head.left = self.minimalBST(arr, left, mid - 1)
+        head.right = self.minimalBST(arr, mid + 1, right)
+
+        return head
+
     def testSortedArrayWithAnswer(self):
         case = [1, 2, 3, 4, 5, 6, 7]
-        tree = minimalBST(case, 0, len(case) - 1)
+        tree = self.minimalBST(case, 0, len(case) - 1)
         self.assertEqual(tree.val, 4, "head value is not correct")
         self.assertEqual(tree.left.val, 2)
         self.assertEqual(tree.left.left.val, 1)
