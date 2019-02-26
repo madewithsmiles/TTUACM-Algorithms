@@ -2,10 +2,15 @@ public class Solution {
     /**
      * Medium level problem
      *
-     * The rotation of the array is really just
-     * nums[k -> the last element] joined with nums[0 -> k]
+     * We should realize that a rotated array is just
+     * nums[k -> end] + nums[0 -> k]
      *
-     * Doing some reversing magic, we can accomplish this in place in O(n) time
+     * Doing some reversing magic, we are able to reverse in place and in O(n)
+     *
+     * This problem helps you see that your problem should be broken down into
+     * smaller problems. This is crucial for interviews and they want to see how
+     * you break down really big problems. This will also be useful when we get to
+     * graphs later in the semester
      */
     public void rotate(int[] nums, int k) {
         k %= nums.length; // At some point in time, we are doing more work than we need to
