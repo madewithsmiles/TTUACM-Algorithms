@@ -17,9 +17,9 @@ func FlipAndInvertImageByReference(arr [][]int) [][]int {
 
 // FlipAndInvertImageByValue reverses and inverts the rows of a 2D array by reference
 func FlipAndInvertImageByValue(arr [][]int) [][]int {
-	for _, row := range arr {
-		reverseByVal(row)
-		invertByVal(row)
+	for index, row := range arr {
+		arr[index] = reverseByVal(row)
+		arr[index] = invertByVal(row)
 	}
 
 	return arr
